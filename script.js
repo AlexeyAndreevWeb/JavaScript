@@ -32,7 +32,6 @@
 
 // -----------------------
 
-
 // const numericRanks = () => {
 //     let number = prompt('введите число...')
 //     if(isNaN(number*1)) {
@@ -46,3 +45,22 @@
 // }
 
 // console.log(numericRanks());
+
+// -----------------------
+// let userNumber = Number(prompt('Введите число...'))
+
+// const numericRanks = (number) => {
+//     let i = 0
+//     let ranks = []
+
+//     while(true) {
+//         ranks.push(number%10)
+//         number = Math.floor(number/10)
+//         if(ranks.length === 3) break
+//     }
+//     return `сотни: ${ranks[2]}, десятки: ${ranks[1]}, единицы:  ${ranks[0]} `
+// }
+
+
+
+// console.log(numericRanks(userNumber));
