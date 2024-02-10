@@ -1,66 +1,40 @@
-// const num1 = prompt('Введите число...')
-// const num2 = prompt('Введите число...')
+// Задание 1
 
-// console.log(+num1 <= 1, +num2 >= 3);
+// const Pow = (number) => Math.pow(number, 3)
+// console.log(Pow(2) + Pow(3))
 
+// Задание 2
 
-
-// ----------------------
-// let test = false
-
-// test ? console.log('+++') : console.log("---");
-
-
-// ------------------------
-// const tenDaysOfMonth = () => {
-//     let day = prompt('введите число...')
-//     if(isNaN(day*1)) {
-//         alert("вы ввели не число...")
-//         return tenDaysOfMonth()
-//     } else {
-//         if(day > 0 && day <= 10) {
-//             return `первая декада`
-//         }else if(day > 10 && day <= 20) {
-//             return `вторая декада`
-//         }else {
-//             return `тетья декада`
-//         }
-//     }
+// const taxDeduction = () => {
+//     let userData = prompt('Введите число...')
+//     if(isNaN(userData*1)) alert('значение задано неверно...')
+//     else document.body.innerHTML = `<h1>${userData*0.87}</h1>`
 // }
 
-// console.log(tenDaysOfMonth());
+// taxDeduction()
 
-// -----------------------
+// Задание 3
 
-// const numericRanks = () => {
-//     let number = prompt('введите число...')
-//     if(isNaN(number*1)) {
-//         alert('вы ввели не число')
-//         return numericRanks()
-        
-//     } else {
-//         const ranks =  number.split('').slice(-3)
-//         return `сотен: ${ranks[0]}, десятков: ${ranks[1]}, единиц: ${ranks[2]}`
-//     }
+// const Minimum = () => {
+//     const num1 = prompt('введите первое число')
+//     const num2 = prompt('введите второе число')
+//     const num3 = prompt('введите третье число')
+//     document.body.innerHTML = `<h1>${Math.min(num1,num2,num3)}</h1>` 
 // }
 
-// console.log(numericRanks());
+// Minimum()
 
-// -----------------------
-// let userNumber = Number(prompt('Введите число...'))
+// Задание 4
 
-// const numericRanks = (number) => {
-//     let i = 0
-//     let ranks = []
+const sum = (num1,num2) =>  num1 + num2
 
-//     while(true) {
-//         ranks.push(number%10)
-//         number = Math.floor(number/10)
-//         if(ranks.length === 3) break
-//     }
-//     return `сотни: ${ranks[2]}, десятки: ${ranks[1]}, единицы:  ${ranks[0]} `
-// }
+const difference = (num1,num2) => num1 > num2 ? num1 - num2 : num2 - num1
 
+const multiplication = (num1,num2) => num1 * num2
 
+const division = (num1,num2) => num1 / num2
 
-// console.log(numericRanks(userNumber));
+console.log(sum(3,5))
+console.log(difference(-5,5))
+console.log(multiplication(3,5))
+console.log(division(-3,5))
