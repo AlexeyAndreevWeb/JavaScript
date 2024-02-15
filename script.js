@@ -12,10 +12,16 @@
 
 // #3
 // const arr2 = []
+// let sum = 0
 // for (let i = 0; i <= 4; i++) {
 //     arr2.push(Math.floor(Math.random() * 10))
+//     sum += arr2[i]
+//     if(arr2[i] === 3) {
+//         console.log(`Индекс:${i}, Значение:${arr2[i]}`)
+//     }
 // }
-// console.log(arr2)
+// console.log(arr2,sum)
+
 
 // # ****
 const display = document.querySelector(".display");
