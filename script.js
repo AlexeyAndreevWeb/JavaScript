@@ -17,6 +17,7 @@
 // }
 // console.log(arr2)
 
+// # ****
 const display = document.querySelector(".display");
 const size = Number(prompt("введите размер башенки, не больше 20"));
 if (isNaN(size) || size > 20) {
@@ -29,13 +30,11 @@ const createCells = (size) => {
         for (let j = 0; j < size; j++) {
             display.insertAdjacentElement('beforeend',document.createElement('div'))
             if(j <= i) {
-                display.lastElementChild.style.background = '#eee123'
+                display.lastElementChild.style.background = 'teal'
             }
         }
     }
-    const cubes = display.querySelectorAll('div')
-    cubes.forEach(i => i.classList.add('cube'))
-    console.log(cubes)
+    display.querySelectorAll('div').forEach(i => i.classList.add('cube'))
     positionCells(display,size)
 };  
 
