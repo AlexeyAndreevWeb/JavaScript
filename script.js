@@ -22,7 +22,6 @@
 // }
 // console.log(arr2,sum)
 
-
 // # ****
 const display = document.querySelector(".display");
 const size = Number(prompt("введите размер башенки, не больше 20"));
@@ -31,22 +30,20 @@ if (isNaN(size) || size > 20) {
   location.reload();
 }
 
-const createCells = (size) => {
-    for (let i = 0; i < size; i++) {
-        for (let j = 0; j < size; j++) {
-            display.insertAdjacentElement('beforeend',document.createElement('div'))
-            if(j <= i) {
-                display.lastElementChild.style.background = 'teal'
-            }
-        }
+const positionCells = (el, size) => {
+  el.style.gridTemplateColumns = `repeat(${size},20px`;
+  el.style.gridTemplateRows = `repeat(${size},20px`;
+};
+
+for (let i = 0; i < size; i++) {
+  for (let j = 0; j < size; j++) {
+    display.insertAdjacentElement("beforeend", document.createElement("div"));
+    if (j <= i) {
+      display.lastElementChild.style.background = "teal";
     }
-    display.querySelectorAll('div').forEach(i => i.classList.add('cube'))
-    positionCells(display,size)
-};  
-
-const positionCells = (el,size) => {
-    el.style.gridTemplateColumns = `repeat(${size},20px`
-    el.style.gridTemplateRows = `repeat(${size},20px`
+  }
 }
+display.querySelectorAll("div").forEach((i) => i.classList.add("cube"));
+positionCells(display, size);
 
-createCells(size)
+
